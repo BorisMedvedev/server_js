@@ -1,0 +1,35 @@
+@import './global.css';
+
+.news-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-news {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+	border: 1px solid gray;
+	padding: 15px;
+	background-color: aquamarine;
+	border-radius: 4px;
+}
+
+.card-news__title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 5px;
+	line-height: 24px;
+}
+
+.card-news__description {
+	margin: 0;
+}
+
+.news-paginator {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	user-select: none;
+}
