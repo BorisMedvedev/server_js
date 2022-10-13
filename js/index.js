@@ -89,11 +89,6 @@ function printNewsPaginator(pagination, newsPaginatorNode) {
 
 	logicCreateBtns();
 	addEventListeners();
-
-	// const newsPaginatorHref = document.querySelectorAll(".btn");
-	// newsPaginatorHref.forEach((el) => {
-	// 	el.href = pagination.page;
-	// });
 }
 
 const newsWrapperNode = document.querySelector(".news-wrapper");
