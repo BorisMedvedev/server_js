@@ -1,5 +1,5 @@
 function httpGetNews(page) {
-	return fetch(`https://gorest.co.in/public-api/posts?page=${page}`)
+	return fetch(`https://gorest.co.in/public-api/posts?page/${page}`)
 		.then((res) => res.json())
 		.catch((err) => console.error(err));
 }
@@ -9,7 +9,7 @@ function createCardNews({ id, title, user_id, body }) {
 	cardNewsNode.classList.add("card-news");
 	cardNewsNode.setAttribute("data-id", id);
 	cardNewsNode.setAttribute("data-user-id", user_id);
-	cardNewsNode.href = `/post.html?id=${id}`;
+	cardNewsNode.href = `/post.html?post_id=${id}`;
 	cardNewsNode.innerHTML = `
 		<h1 class="card-news__title">${title}</h1>
 		<p class="card-news__description">${body}</p>
@@ -119,16 +119,3 @@ function initApp() {
 }
 
 initApp();
-
-// console.log(getUrlParam("abc"));
-
-// const cardNews = createCardNews({
-// 	id: 1,
-// 	title: "title",
-// 	user_id: 23,
-// 	body: "asdsadadq asd qw dq wq qd qwqwd qwd",
-// });
-
-// console.log(cardNews);
-
-// / предположим, что мы открыли страницу .../index.html?x=1&y=xyz // значение window.location.search в таком случае будет "?x=1&y=xyz" const pageParams = new URLSearchParams(window.location.search); pageParams.get('x'); // "1" pageParams.get('y'); // "xyz" pageParams.get('z'); // null, нет такого параметра
